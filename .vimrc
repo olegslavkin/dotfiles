@@ -14,3 +14,10 @@ Plug 'keith/parsec.vim'
 call plug#end()
 
 colorscheme torte
+set undofile
+set sts=4
+set ts=4
+set sw=4
+set expandtab
+set autoindent
+syn on
