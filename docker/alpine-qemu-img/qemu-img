@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -it --rm alpine-qemu-img qemu-img $1
