@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -it --rm alpine-qemu-img qemu-img $1
+docker run -it --rm -v $HOME:/home/$(whoami) -v $(pwd):/mnt -w /mnt alpine-qemu-img qemu-img $@
