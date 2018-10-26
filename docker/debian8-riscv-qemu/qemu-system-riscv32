@@ -1,0 +1,7 @@
+#!/bin/bash
+docker run -it --rm \
+           -v $HOME:/home/$(whoami) \
+           -u $(id -u):$(id -u) \
+           -v $(pwd):/mnt \
+           -w /mnt \
+           debian8-riscv-qemu /opt/bin/qemu-system-riscv32 $@
