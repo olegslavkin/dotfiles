@@ -1,5 +1,8 @@
-FROM ubuntu
+ARG RELEASE=16.04
+
+FROM ubuntu:$RELEASE
 MAINTAINER Oleg Slavkin <oleg@slavkin.info>
+
 
 ARG LINUXUSER=user
 ARG UID=1000
@@ -13,4 +16,4 @@ COPY sudoers /etc/sudoers
 
 USER $LINUXUSER
 
-# docker build --build-arg LINUXUSER=$(whoami) --build-arg UID=$(id -u) -t $(basename $(pwd)) .
+# docker build --build-arg LINUXUSER=$(whoami) --build-arg UID=$(id -u) --build-arg RELEASE=16.04 -t $(basename $(pwd)) .
