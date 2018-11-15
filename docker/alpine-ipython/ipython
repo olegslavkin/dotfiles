@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -it --rm -v $HOME:/home/$(whoami) -u $(id -u):$(id -u) -v $(pwd):/mnt -w /mnt alpine-ipython ipython --colors=Linux $@
