@@ -1,0 +1,10 @@
+FROM python:3.7.1-alpine3.8
+MAINTAINER Oleg Slavkin <oleg@slavkin.info>
+
+ARG LINUXUSER=user
+
+RUN pip3 install ipython
+    
+USER $LINUXUSER
+
+# docker build -f Dockerfile.python --build-arg LINUXUSER=$(whoami) -t $(basename $(pwd) ) .
