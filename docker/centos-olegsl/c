@@ -1,0 +1,9 @@
+#!/bin/bash
+docker run -it --rm \
+        -v ${HOME}:/home/${USER} \
+        -v $(pwd):/mnt \
+        -v /etc/localtime:/etc/localtime \
+        -u ${UID}:${UID} \
+        -w /home/${USER} \
+        -e PS1="(docker)[\u@\h \W]\\$ " \
+        centos-${USER} bash

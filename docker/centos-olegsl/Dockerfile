@@ -9,4 +9,4 @@ RUN yum install -y sudo && \
     
 USER $LINUXUSER
 
-# docker build --build-arg LINUXUSER=$(whoami) -t alpine-$(whoami) .
+# docker build --build-arg LINUXUSER=$(whoami) -t centos-$(whoami) .
