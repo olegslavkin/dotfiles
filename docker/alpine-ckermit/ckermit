@@ -1,0 +1,10 @@
+#!/bin/bash
+docker run -it --rm \
+        -v ${HOME}:/home/${USER} \
+        -v $(pwd):/mnt \
+        -v /etc/localtime:/etc/localtime \
+        -u ${UID}:${UID} \
+        -w /home/${USER} \
+        --device /dev/ttyUSB0 \
+        -e PS1="(docker)[\u@\h \W]\\$ " \
+        alpine-ckermit sudo ckermit /tmp/mykermrc
