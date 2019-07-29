@@ -1,3 +1,5 @@
 [user]
 	name = Oleg Slavkin
-	email = oleg@slavkin.info
+    email = oleg@slavkin.info
+[core]
+    editor = vim
