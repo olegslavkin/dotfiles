@@ -1,4 +1,4 @@
-FROM python:3.7.1-alpine3.8
+FROM python:alpine
 MAINTAINER Oleg Slavkin <oleg@slavkin.info>
 
 ARG LINUXUSER=user
